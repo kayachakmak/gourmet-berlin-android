@@ -30,7 +30,7 @@ class MainViewModel : ViewModel() {
             if (isChildFriendly) params.add("childFriendly=true")
 
             val queryString = params.joinToString("&")
-            val baseUrl = "http://10.0.2.2:8000/api/" // Android emulator localhost access
+            val baseUrl = "https://gourmet-berlin-bce140ecdfc9.herokuapp.com"
             val urlString = "$baseUrl?$queryString"
 
             withContext(Dispatchers.IO) {

@@ -4,23 +4,18 @@
     android:layout_height="match_parent">
 
     <!-- Banner at the top -->
-    <FrameLayout
-        android:id="@+id/banner_container"
+    <com.example.gourmetberlin.ui.Banner
+        android:id="@+id/banner"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="top"
-        android:background="@color/your_banner_background_color">
-        <!-- Include your banner layout here -->
-    </FrameLayout>
+        android:layout_gravity="top" />
 
     <!-- Profile below the banner -->
-    <FrameLayout
-        android:id="@+id/profile_container"
+    <com.example.gourmetberlin.ui.Profile
+        android:id="@+id/profile"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/your_profile_background_color">
-        <!-- Include your profile layout here -->
-    </FrameLayout>
+        android:background="@color/banner_background"/>
 
     <!-- Main content: FilterBar and MapFragment -->
     <LinearLayout
@@ -42,13 +37,10 @@
     </LinearLayout>
 
     <!-- Footer at the bottom -->
-    <FrameLayout
-        android:id="@+id/footer_container"
+    <com.example.gourmetberlin.ui.Footer
+        android:id="@+id/footer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
-        android:background="@color/your_footer_background_color">
-        <!-- Include your footer layout here -->
-    </FrameLayout>
-
+        android:background="@color/banner_background" />
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
