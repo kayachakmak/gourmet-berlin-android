@@ -1,31 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="horizontal"
-    android:padding="8dp"
-    android:background="@color/gray_200">
+    android:layout_height="match_parent">
 
-    <Spinner
-        android:id="@+id/spinner_cuisine"
-        android:layout_width="wrap_content"
+    <!-- Banner at the top -->
+    <FrameLayout
+        android:id="@+id/banner_container"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
-        android:padding="8dp"
-        android:background="@drawable/spinner_background"
-        android:spinnerMode="dropdown" />
+        android:layout_gravity="top"
+        android:background="@color/your_banner_background_color">
+        <!-- Include your banner layout here -->
+    </FrameLayout>
 
-    <CheckBox
-        android:id="@+id/checkbox_child_friendly"
-        android:layout_width="wrap_content"
+    <!-- Profile below the banner -->
+    <FrameLayout
+        android:id="@+id/profile_container"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Children Friendly"
-        android:layout_marginEnd="16dp" />
+        android:background="@color/your_profile_background_color">
+        <!-- Include your profile layout here -->
+    </FrameLayout>
 
-    <CheckBox
-        android:id="@+id/checkbox_animal_friendly"
-        android:layout_width="wrap_content"
+    <!-- Main content: FilterBar and MapFragment -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <com.example.gourmetberlin.ui.FilterBar
+            android:id="@+id/filter_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <FrameLayout
+            android:id="@+id/fragment_container"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <!-- Footer at the bottom -->
+    <FrameLayout
+        android:id="@+id/footer_container"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Animal Friendly" />
+        android:layout_gravity="bottom"
+        android:background="@color/your_footer_background_color">
+        <!-- Include your footer layout here -->
+    </FrameLayout>
 
-</LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
