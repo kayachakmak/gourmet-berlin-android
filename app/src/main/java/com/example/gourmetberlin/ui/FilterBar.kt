@@ -33,7 +33,6 @@ class FilterBar @JvmOverloads constructor(
     }
 
     private fun setupSpinner() {
-        // Example cuisines list, you should replace this with your actual data
         val cuisines = listOf("All Restaurants", "Italian", "Chinese", "Mexican", "Indian")
         val adapter = ArrayAdapter(context, android.R.layout.simple_spinner_item, cuisines)
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
