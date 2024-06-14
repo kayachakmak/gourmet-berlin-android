@@ -1,29 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <!-- Banner at the top -->
-    <com.example.gourmetberlin.ui.Banner
-        android:id="@+id/banner"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="top" />
-
-    <!-- Profile below the banner -->
-    <com.example.gourmetberlin.ui.Profile
-        android:id="@+id/profile"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/banner_background"/>
-
-    <!-- Main content: FilterBar and MapFragment -->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
+        android:layout_height="match_parent"
         android:orientation="vertical">
 
+        <!-- Banner at the top -->
+        <com.example.gourmetberlin.ui.Banner
+            android:id="@+id/banner"
+            android:layout_width="match_parent"
+            android:layout_height="81dp"
+            android:background="@color/banner_background" />
+
+        <!-- Profile below the banner -->
+        <com.example.gourmetberlin.ui.Profile
+            android:id="@+id/profile"
+            android:layout_width="match_parent"
+            android:layout_height="38dp"
+            android:background="@color/banner_background" />
+
+        <!-- Main content: FilterBar and MapFragment -->
         <com.example.gourmetberlin.ui.FilterBar
             android:id="@+id/filter_bar"
             android:layout_width="match_parent"
@@ -34,13 +34,15 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1" />
+
+        <!-- Footer at the bottom -->
+        <com.example.gourmetberlin.ui.Footer
+            android:id="@+id/footer"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_gravity="bottom"
+            android:background="@color/banner_background" />
+
     </LinearLayout>
 
-    <!-- Footer at the bottom -->
-    <com.example.gourmetberlin.ui.Footer
-        android:id="@+id/footer"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom"
-        android:background="@color/banner_background" />
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
