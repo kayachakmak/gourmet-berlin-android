@@ -11,5 +11,5 @@ Gourmet Berlin is an Android application that allows users to explore high-quali
 
 ## Screenshot
 
-![Screenshot](./images/Main%20page.png)
+<img src="./images/screenshot.png" alt="Screenshot" width="600"/>
 
